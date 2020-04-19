@@ -1,0 +1,48 @@
+### Conky by Jesse Avalos , Vist me on Eye Candy Linux Google +
+update_interval 1
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 1
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+format_human_readable
+use_xft yes
+xftfont Existence:size=8
+override_utf8_locale yes
+text_buffer_size 2048
+own_window_class Conky
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+alignment bottom_middle
+gap_x 0
+gap_y -80
+minimum_size 600 100
+draw_shades no
+default_color DFDCE3
+color1 FA3A8D
+color2 1CBBDB
+
+own_window_argb_value 0
+own_window_argb_visual no
+own_window_colour 000000
+TEXT
+${goto 255}${voffset 10}${font Origin:size=20}${color2} Linux Manjaro i3 18.0.4  / Systems ${voffset 8} ${color1}
+${goto 100}${font Dingytwo:size=25}7$font  ${voffset -37}
+${goto 225}${font Dingytwo:size=25}O$font  ${voffset -37}
+${goto 350}${font Dingytwo:size=25}A$font  ${voffset -37}
+${goto 475}${font Dingytwo:size=25}5$font  ${voffset -37}
+${goto 600}${font Dingytwo:size=25}4$font  ${voffset -37}
+${goto 725}${font Dingytwo:size=25}W$font  ${voffset -37}
+${goto 850}${font Dingytwo:size=25}M$font  ${voffset 5}${color2}
+
+${goto 135}${voffset -45}${font Origin:size=10} Cpu : ${cpu cpu0}%
+${goto 257}${voffset -19}${font Origin:size=9} Mem : $memperc%
+${goto 385}${voffset -18}${font Origin:size=10} Wifi : ${wireless_link_qual wlp2s0}%
+${goto 520}${voffset -20}${font Origin:size=10} ${upspeed wlp2s0}
+${goto 645}${voffset -19}${font Origin:size=10} ${downspeed wlp2s0}
+${goto 765}${voffset -20}${font Origin:size=9}Home: $fs_used_perc %
+${goto 885}${voffset -18}${font Origin:size=10} Temp : ${acpitemp}°C 
+
