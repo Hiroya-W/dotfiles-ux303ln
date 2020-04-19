@@ -1,0 +1,4 @@
+# Bash 補完の大文字小文字を無視する
+$if Bash
+set completion-ignore-case on
+$endif
