@@ -1,0 +1,4 @@
+#!/bin/bash
+/usr/bin/google-chrome-stable --http-proxy=proxy.maizuru-ct.ac.jp:8080 --https-proxy=proxy.maizuru-ct.ac.jp:8080 %U
+
+
