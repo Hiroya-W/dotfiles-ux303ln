@@ -1,0 +1,71 @@
+; # vim:filetype=dosini
+;===============================================
+;              My Polybar Settings
+;===============================================
+
+[colors]
+background = #2F2F2F
+foreground = #EEEEEE
+orange     = #FDB95D
+
+[margin]
+for-modules = 1
+
+[bar/main]
+;DP モニタを接続しているとき
+monitor = ${env:MONITOR:DP1}
+width  = 100%
+height = 24
+radius = 6.0
+line-size = 2
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "Fantasque Sans Mono:pixelsize=10;3"
+font-1 = "Iosevka Nerd Font:pixelsize=14;3"
+font-2 = "Iosevka Nerd Font:pixelsize=11;3"
+
+border-size = 1
+
+;これで中心に自動で合わせてくれる
+fixed-center = true
+
+;モジュールのロード
+modules-center = date
+
+;################################################
+; 日付表示
+[module/date]
+type = internal/date
+interval = 1
+label = %time%
+label-padding = 1
+label-underline = ${colors.orange}
+time =  %a %d %b %Y %T
+label-margin = ${margin.for-modules}
+
+;################################################
+
+
+;################################################
+; 明るさ調整
+[module/xbacklight]
+type = internal/xbacklight
+format = <label> <bar>
+format-underline = ${colors.adapta-cyan}
+format-padding = 1
+label = 
+bar-width = 8
+bar-indicator = 
+bar-indicator-foreground = ${colors.adapta-lightgreen}
+bar-indicator-font = 0
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = ${colors.adapta-lightgreen}
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.adapta-grey}
+;format-margin = ${margin.for-modules}
+
+;################################################
