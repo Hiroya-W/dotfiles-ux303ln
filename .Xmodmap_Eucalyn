@@ -1,0 +1,42 @@
+!Eucalyn
+
+keycode 24 = q Q q Q 
+keycode 25 = w W w W
+keycode 26 = comma less comma less
+keycode 27 = period greater period greater
+keycode 28 = semicolon plus semicolon plus
+keycode 29 = m M m M
+keycode 30 = r R r R
+keycode 31 = d D d D
+keycode 32 = y Y y Y
+keycode 33 = p P p P
+
+keycode 38 = a A a A
+keycode 39 = o O o O
+keycode 40 = e E e E
+keycode 41 = i I i I
+keycode 42 = u U u U
+keycode 43 = g G g G
+keycode 44 = t T t T
+keycode 45 = k K k K
+keycode 46 = s S s S
+keycode 47 = n N n N
+
+keycode 52 = z Z z Z
+keycode 53 = x X x X
+keycode 54 = c C c C
+keycode 55 = v V v V
+keycode 56 = f F f F
+keycode 57 = b B b B
+keycode 58 = h H h H
+keycode 59 = j J j J
+keycode 60 = l L l L
+
+
+!remove lock = Caps_Lock
+
+keycode 66 = Control_L
+keycode 102 = Escape
+keycode 100 = Escape
+
+add control = Control_L
