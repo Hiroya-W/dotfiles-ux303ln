@@ -1,0 +1,20 @@
+[global_config]
+[keybindings]
+  hide_window = <Primary><Shift><Alt>a
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.6
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Untitled1 12
+    scrollbar_position = hidden
+    show_titlebar = False
