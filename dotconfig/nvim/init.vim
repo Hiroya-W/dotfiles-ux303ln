@@ -111,6 +111,7 @@ nnoremap <down> gj
 nnoremap <up> gk
 " バックスペースキーの有効化
 set backspace=indent,eol,start
+set mouse =a
 
 " ==Tag Jamp""
 set showmatch " 括弧の対応関係を一瞬表示する
@@ -211,3 +212,4 @@ function! s:BufInfo()
 endfunction
 command! -nargs=0 BufInfo call s:BufInfo()
 
+packadd termdebug

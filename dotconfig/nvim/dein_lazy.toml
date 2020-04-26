@@ -1,5 +1,16 @@
 # vim: set filetype=
 [[plugins]]
+repo='puremourning/vimspector'
+on_ft=['cpp']
+build='./install_gadget.py --enable-c'
+hook_add='''
+    let g:vimspector_enable_mappings='VISUAL_STUDIO'
+    sign define vimspectorBP text=🔴 texthl=Normal
+    sign define vimspectorBPDisabled text=🔵 texthl=Normal
+    sign define vimspectorPC text=🔶 texthl=SpellBad
+'''
+
+[[plugins]]
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 hook_add = '''

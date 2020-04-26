@@ -139,3 +139,10 @@ hook_add='''
     nmap <C-\> <Plug>(caw:hatpos:toggle)
     vmap <C-\> <Plug>(caw:hatpos:toggle)
 '''
+
+[[plugins]]
+repo='simeji/winresizer'
+hook_add='''
+    let g:winresizer_start_key = '<C-R>'
+'''
+
