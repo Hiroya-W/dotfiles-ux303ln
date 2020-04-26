@@ -303,7 +303,7 @@ exec_always --no-startup-id LC_ALL=C bash ~/.config/polybar/launch.sh &
 # exec --no-startup-id polybar example
 
 exec --no-startup-id fcitx
-exec --no-startup-id sleep 5s; guake
+#exec --no-startup-id sleep 5s; guake
 exec --no-startup-id kdeconnect-indicator
 
 exec --no-startup-id xautolock -time 30 -locker blurlock
