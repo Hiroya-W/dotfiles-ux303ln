@@ -1,0 +1,17 @@
+send-keys 'clear' C-m
+rename-window ComProIDE
+splitw -h
+splitw -v
+splitw -h
+
+send-keys -t 3 'gotop' C-m
+
+send-keys -t 2 'cd ~/Documents/Git-Repos/comp_pg' C-m
+send-keys -t 1 'cd ~/Documents/Git-Repos/comp_pg' C-m
+send-keys -t 0 'cd ~/Documents/Git-Repos/comp_pg' C-m
+
+send-keys -t 2 'lazygit' C-m
+send-keys -t 1 'atcoder-tools gen '
+send-keys -t 0 'vi' C-m
+
+select-pane -U
