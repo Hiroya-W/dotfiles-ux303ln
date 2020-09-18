@@ -2,6 +2,15 @@
 [keybindings]
   full_screen = None
   hide_window = <Primary><Shift><Alt>a
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_darkness = 0.6
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Untitled1 12
+    show_titlebar = False
+    scrollbar_position = hidden
 [layouts]
   [[default]]
     [[[child1]]]
@@ -11,11 +20,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_darkness = 0.6
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    font = Untitled1 12
-    scrollbar_position = hidden
-    show_titlebar = False
