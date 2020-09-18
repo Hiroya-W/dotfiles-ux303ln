@@ -36,19 +36,32 @@ hook_add = '''
 # ファジーファインダー　あいまい検索
 # :Dgrep
 # :Dresume
+# [[plugins]]
+# repo = 'Shougo/denite.nvim'
+# hook_add = '''
+#   source ~/.config/nvim/plugins/denite.vim
+# '''
+# fzfでいいような？
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-  source ~/.config/nvim/plugins/denite.vim
+repo='junegunn/fzf'
+build='fzf#install()'
+
+[[plugins]]
+repo='junegunn/fzf.vim'
+hook_add='''
+    source ~/.config/nvim/plugins/fzf.vim
 '''
+
 
 # ディレクトリをツリー表示するやつ
 # Ctrl + e
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-  source ~/.config/nvim/plugins/nerdtree
-'''
+# [[plugins]]
+# repo = 'scrooloose/nerdtree'
+# hook_add = '''
+#   source ~/.config/nvim/plugins/nerdtree
+# '''
+# coc-explorerで置き換えた
+
 
 # Gitクライアントプラグイン
 [[plugins]]
@@ -129,8 +142,8 @@ hook_add='''
 #######################################################
 
 
-[[plugins]]
-repo='wordijp/NeoDebug'
+#[[plugins]]
+#repo='wordijp/NeoDebug'
 
 # コメント切り替え
 [[plugins]]
@@ -146,3 +159,15 @@ hook_add='''
     let g:winresizer_start_key = '<C-R>'
 '''
 
+[[plugins]]
+repo='kevinhwang91/rnvimr'
+build='make sync'
+hook_add='''
+    source ~/.config/nvim/plugins/rnvimr.vim
+'''
+
+[[plugins]]
+repo='junegunn/rainbow_parentheses.vim'
+hook_add='''
+    source ~/.config/nvim/plugins/rainbow_parentheses.vim
+'''
