@@ -129,6 +129,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 set clipboard+=unnamedplus
+nnoremap Q gq
 
 "----------------------------------------------------------
 "                  ステータスラインの設定
@@ -212,4 +213,4 @@ function! s:BufInfo()
 endfunction
 command! -nargs=0 BufInfo call s:BufInfo()
 
-packadd termdebug
+"packadd termdebug
