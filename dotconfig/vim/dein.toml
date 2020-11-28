@@ -1,0 +1,89 @@
+# dein.vim
+# Required
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# colorscheme
+[[plugins]]
+repo = 'ayu-theme/ayu-vim'
+hook_add = '''
+  let ayucolor = "dark"
+  colorscheme ayu
+'''
+
+# airline
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+# airline theme
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+  source ~/.config/nvim/plugins/vim-airline
+'''
+
+# fzfでいいような？
+[[plugins]]
+repo='junegunn/fzf'
+build='fzf#install()'
+
+[[plugins]]
+repo='junegunn/fzf.vim'
+hook_add='''
+    source ~/.config/nvim/plugins/fzf.vim
+'''
+
+# Gitクライアントプラグイン
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+  source ~/.config/nvim/plugins/vim-fugitive
+'''
+
+# git HEADからの変更を左端に表示するやつ
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+# かっこを自動で追加するやつ
+[[plugins]]
+repo='cohama/lexima.vim'
+
+# 囲みを強くするよつ
+[[plugins]]
+repo='tpope/vim-surround'
+
+# LSP Symbolを取得するやつ　Vistaとセット
+[[plugins]]
+repo='neoclide/coc.nvim'
+merged=0
+rev='release'
+hook_add='''
+    source ~/.config/nvim/plugins/coc.vim
+'''
+# vista
+[[plugins]]
+repo='liuchengxu/vista.vim'
+hook_add='''
+  source ~/.config/nvim/plugins/vista.vim
+'''
+
+# コメント切り替え
+[[plugins]]
+repo='tyru/caw.vim'
+hook_add='''
+    nmap <C-\> <Plug>(caw:hatpos:toggle)
+    vmap <C-\> <Plug>(caw:hatpos:toggle)
+'''
+
+[[plugins]]
+repo='simeji/winresizer'
+hook_add='''
+    let g:winresizer_start_key = '<C-R>'
+'''
+
+[[plugins]]
+repo='junegunn/rainbow_parentheses.vim'
+hook_add='''
+    source ~/.config/nvim/plugins/rainbow_parentheses.vim
+'''
+

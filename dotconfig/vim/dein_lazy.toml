@@ -1,0 +1,11 @@
+# vim: set filetype=
+[[plugins]]
+repo='puremourning/vimspector'
+on_ft=['cpp','c']
+build='./install_gadget.py --enable-c'
+hook_add='''
+    let g:vimspector_enable_mappings='VISUAL_STUDIO'
+    sign define vimspectorBP text=o texthl=Normal
+    sign define vimspectorBPDisabled text=x texthl=Normal
+    sign define vimspectorPC text=> texthl=SpellBad
+'''
