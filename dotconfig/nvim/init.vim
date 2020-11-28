@@ -1,8 +1,8 @@
 set encoding=utf-8 "ファイル読み込み時の文字エンコード
 scriptencoding utf-8 "マルチバイト文字
 
-let g:python_host_prog = '/home/hiroya/.pyenv/versions/2.7.17/bin/python'
-let g:python3_host_prog = '/home/hiroya/.pyenv/versions/3.8.1/bin/python'
+let g:python_host_prog = '/home/hiroya/.config/nvim/neovim2/bin/python'
+let g:python3_host_prog = '/home/hiroya/.config/nvim/neovim3/bin/python'
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -55,7 +55,8 @@ set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コー�
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
 set ambiwidth=double " □や○文字が崩れる問題を解決
 set nobackup " バックアップファイルを作らない
-set noswapfile " スワップファイルを作らない
+"set noswapfile " スワップファイルを作らない
+set directory=/tmp
 set autoread " 編集中のファイルが変更されたら自動で読み直す
 set hidden " バッファが編集中でもその他のファイルを開けるように
 set showcmd " 入力中のコマンドをステータスに表示する
@@ -147,70 +148,7 @@ highlight NonText ctermbg=NONE guibg=NONE
 highlight SpecialKey ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
-
-"-----------------------------------------
-"                補完用
-"-----------------------------------------
-" config from : http://kutimoti.hatenablog.com/entry/2018/06/09/165225
-" C/Cpp
-" config from : https://github.com/cquery-project/cquery/wiki/Neovim
-" config from : https://christina04.hatenablog.com/entry/migrate-from-vim-go-to-vim-lsp
-"nmap <silent> gd :LspDefinition<CR>
-"nmap <silent> <f2> :LspRename<CR>
-"nmap <silent> <Leader>d :LspTypeDefinition<CR>
-"nmap <silent> <Leader>r :LspReferences<CR>
-"nmap <silent> <Leader>i :LspImplementation<CR>
-"let g:lsp_diagnostics_enabled = 1
-"let g:lsp_diagnostics_echo_cursor = 1
-"let g:asyncomplete_popup_delay = 200
-"let g:lsp_text_edit_enabled = 1
-
-
-"-----------------------------------------
-"                自作コマンド
-"-----------------------------------------
-function! s:BufInfo()
-  echo "\n----- バッファに関する情報 -----"
-  echo "bufnr('%')=" . bufnr('%') . "	// 現在のバッファ番号"
-  echo "bufnr('$')=" . bufnr('$') . "	// 最後のバッファ番号"
-  echo "bufnr('#')=" . bufnr('#') . "	// 直前のバッファ番号？（仕様がよくわからない）"
-  for i in range(1, bufnr('$'))
-    echo  "bufexists(" . i . ")=".bufexists(i)
-    echon " buflisted(" . i . ")=".buflisted(i)
-    echon " bufloaded(" . i . ")=".bufloaded(i)
-    echon " bufname(" . i . ")=".bufname(i)
-  endfor
-  echo "// bufexists(n)=バッファnが存在するか"
-  echo "// buflisted(n)=バッファnがリストにあるか"
-  echo "// bufloaded(n)=バッファnがロード済みか"
-  echo "// bufname(n)=バッファnの名前"
-
-  echo "\n----- ウィンドウに関する情報 -----"
-  echo "winnr()="    . winnr()    . "	// 現在のウィンドウ番号"
-  echo "winnr('$')=" . winnr('$') . "	// 最後のウィンドウ番号"
-  echo "winnr('#')=" . winnr('#') . "	// 直前のウィンドウ番号？（仕様がよくわからない）"
-  for i in range(1, winnr('$'))
-    echo "winbufnr(" . i . ")=".winbufnr(i) . "	// ウィンドウ" . i . "に関連付くバッファ番号"
-  endfor
-
-  echo "\n----- タブページに関する情報 -----"
-  echo "tabpagenr()="    . tabpagenr()    . '	// 現在のタブページ番号'
-  echo "tabpagenr('$')=" . tabpagenr('$') . '	// 最後のタブページ番号'
-  for i in range(1, tabpagenr('$'))
-    echo 'tabpagebuflist(' . i . ')='
-    echon tabpagebuflist(i)
-    echon "	// タブページ" . i . "に関連づくバッファ番号のリスト"
-  endfor
-  for i in range(1, tabpagenr('$'))
-    echo  'tabpagewinnr(' . i . ')=' . tabpagewinnr(i)
-    echon " tabpagewinnr(" . i . ", '$')=" . tabpagewinnr(i, '$')
-    echon " tabpagewinnr(" . i . ", '#')=" . tabpagewinnr(i, '#')
-  endfor
-  echo "// tabpagewinnr(n)     =タブページnの現在のウィンドウ番号"
-  echo "// tabpagewinnr(n, '$')=タブページnの最後のウィンドウ番号"
-  echo "// tabpagewinnr(n, '#')=タブページnの直前のウィンドウ番号？（仕様がよくわからない）"
-
-endfunction
-command! -nargs=0 BufInfo call s:BufInfo()
-
-"packadd termdebug
+autocmd FileTYpe tex syntax region texRefZone matchgroup=texStatement
+     \ start="\\ref\(fig\|tab\|sec\|eqn\|chap\|alg\){"
+     \ end="}\|%stopzone\>"
+     \ contains=@texRefGroup
