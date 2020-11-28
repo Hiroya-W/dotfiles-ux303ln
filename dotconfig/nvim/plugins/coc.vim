@@ -46,6 +46,7 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Show commands.
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 
+
 " Explorer
 let g:coc_explorer_global_presets = {
             \   '.vim': {
@@ -72,3 +73,5 @@ let g:coc_explorer_global_presets = {
 nmap <space>e :CocCommand explorer<CR>
 "nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+

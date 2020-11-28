@@ -1,6 +1,13 @@
-nmap [figitive] <Nop>
-map <Leader>g [figitive]
-nmap <silent> [figitive]s :<C-u>Gstatus<CR>
-nmap <silent> [figitive]d :<C-u>Gdiff<CR>
-nmap <silent> [figitive]b :<C-u>Gblame<CR>
-nmap <silent> [figitive]l :<C-u>Glog<CR>
+nnoremap <space>gs :tab sp<CR>:Gstatus<CR>:only<CR>
+nnoremap <space>ga :Gwrite<CR>
+nnoremap <space>gc :Gcommit<CR>
+nnoremap <space>gb :Gblame<CR>
+nnoremap <space>gl :Git logall<CR>
+nnoremap <space>gh :tab sp<CR>:0Glog<CR>
+" abbrev for `git history`: create new quickfix tab for history
+nnoremap <space>gp :Gpush<CR>
+nnoremap <space>gf :Gfetch<CR>
+nnoremap <space>gd :Gvdiff<CR>
+nnoremap <space>gr :Grebase -i<CR>
+nnoremap <space>gg :Ggrep 
+nnoremap <space>gm :Gmerge 

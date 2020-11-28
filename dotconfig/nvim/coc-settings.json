@@ -12,5 +12,7 @@
     },
     "explorer.quitOnOpen": true,
     "html.autoClosingTags": true,
-    "latex.lint.onChange": true
+    "latex.lint.onChange": true,
+    "clangd.path": "/home/hiroya/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
+    "yaml.format.enable": false
 }

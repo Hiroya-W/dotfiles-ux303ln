@@ -11,17 +11,6 @@ hook_add = '''
   colorscheme ayu
 '''
 
-##############################################
-# Airlineを使うので使わない
-##############################################
-# Vimのステータスラインをかっこよくするやつ
-# lightline
-# [[plugins]]
-# repo = 'itchyny/lightline.vim'
-# hook_add = '''
-#     source ~/.config/nvim/plugins/lightline.vim
-# '''
-
 # airline
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -33,14 +22,6 @@ hook_add = '''
   source ~/.config/nvim/plugins/vim-airline
 '''
 
-# ファジーファインダー　あいまい検索
-# :Dgrep
-# :Dresume
-# [[plugins]]
-# repo = 'Shougo/denite.nvim'
-# hook_add = '''
-#   source ~/.config/nvim/plugins/denite.vim
-# '''
 # fzfでいいような？
 [[plugins]]
 repo='junegunn/fzf'
@@ -52,17 +33,6 @@ hook_add='''
     source ~/.config/nvim/plugins/fzf.vim
 '''
 
-
-# ディレクトリをツリー表示するやつ
-# Ctrl + e
-# [[plugins]]
-# repo = 'scrooloose/nerdtree'
-# hook_add = '''
-#   source ~/.config/nvim/plugins/nerdtree
-# '''
-# coc-explorerで置き換えた
-
-
 # Gitクライアントプラグイン
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -73,15 +43,6 @@ hook_add = '''
 # git HEADからの変更を左端に表示するやつ
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
-
-############################################
-# deopleteをcoc.vimに置き換えたので使わない？
-############################################
-#[[plugins]]
-#repo = 'Shougo/neosnippet.vim'
-#
-#[[plugins]]
-#repo = 'Shougo/neosnippet-snippets'
 
 # かっこを自動で追加するやつ
 [[plugins]]
@@ -106,45 +67,6 @@ hook_add='''
   source ~/.config/nvim/plugins/vista.vim
 '''
 
-############################################
-# coc.vimがあれば使わないと思う
-############################################
-# 単語補完
-#[[plugins]]
-#repo = 'Shougo/deoplete.nvim'
-#hook_add = '''
-#  source ~/.config/nvim/plugins/deoplete.nvim
-#'''
-
-# Language Server Protocolを簡単に使えるようにするセット
-#######################################################
-#[[plugins]]
-#repo='prabirshrestha/async.vim'
-
-#[[plugins]]
-#repo='prabirshrestha/asyncomplete.vim'
-
-#[[plugins]]
-#repo='prabirshrestha/asyncomplete-lsp.vim'
-#
-#[[plugins]]
-#repo='prabirshrestha/vim-lsp'
-#
-#[[plugins]]
-#repo='mattn/vim-lsp-settings'
-#
-#[[plugins]]
-#repo='mattn/vim-lsp-icons'
-#
-#[[plugins]]
-#repo='lighttiger2505/deoplete-vim-lsp'
-
-#######################################################
-
-
-#[[plugins]]
-#repo='wordijp/NeoDebug'
-
 # コメント切り替え
 [[plugins]]
 repo='tyru/caw.vim'
@@ -157,13 +79,6 @@ hook_add='''
 repo='simeji/winresizer'
 hook_add='''
     let g:winresizer_start_key = '<C-R>'
-'''
-
-[[plugins]]
-repo='kevinhwang91/rnvimr'
-build='make sync'
-hook_add='''
-    source ~/.config/nvim/plugins/rnvimr.vim
 '''
 
 [[plugins]]
